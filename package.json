@@ -1,0 +1,17 @@
+{
+  "name": "nepal-taja-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-updating Nepali news website (RSS + Gemini + GitHub Actions + Vercel)",
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update.js",
+    "build": "node scripts/build-pages.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  }
+}

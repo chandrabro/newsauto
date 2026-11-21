@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{SITE_NAME}} — {{SITE_TAGLINE}}</title>
+<meta name="description" content="{{SITE_DESCRIPTION}}">
+<link rel="canonical" href="{{SITE_URL}}/">
+<meta property="og:site_name" content="{{SITE_NAME}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ne_NP">
+<meta property="og:title" content="{{SITE_NAME}} — {{SITE_TAGLINE}}">
+<meta property="og:description" content="{{SITE_DESCRIPTION}}">
+<meta property="og:url" content="{{SITE_URL}}/">
+<meta property="og:image" content="{{SITE_URL}}/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c8102e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}} RSS" href="/feed.xml">
+<link rel="preload" href="/fonts/noto-sans-devanagari-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('np_theme');if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem('np_fs');if(f)document.documentElement.dataset.fs=f}catch(e){}</script>
+</head>
+<body>
+<header class="site-head" id="head">
+  <div class="topbar">
+    <div class="wrap bar">
+      <a class="logo" href="#/" aria-label="{{SITE_NAME}} - मुख्य पृष्ठ"><span class="logo-mark">ता</span><span class="logo-text">{{SITE_NAME}}</span></a>
+      <div class="bar-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="खोज्नुहोस्">🔍</button>
+        <button class="icon-btn" id="fsBtn" aria-label="अक्षरको आकार" title="अक्षरको आकार">अ+</button>
+        <button class="icon-btn" id="themeBtn" aria-label="डार्क / लाइट मोड" title="थिम">◐</button>
+      </div>
+    </div>
+  </div>
+  <nav class="nav" id="nav" aria-label="समाचार वर्ग"><div class="wrap"></div></nav>
+  <div class="searchbar" id="searchbar" hidden>
+    <div class="wrap"><input id="q" type="search" placeholder="समाचार खोज्नुहोस्… (जस्तै: बजेट, क्रिकेट)" autocomplete="off" enterkeyhint="search"></div>
+  </div>
+</header>
+
+<div class="ticker" id="ticker" hidden>
+  <div class="ticker-label"><i></i>ताजा</div>
+  <div class="ticker-track"><div class="ticker-inner" id="tickerInner"></div></div>
+</div>
+
+<div class="wrap statusbar" id="status"><span>&nbsp;</span></div>
+
+<main class="wrap" id="app" aria-live="polite">
+  <div class="sk" style="height:340px;margin-top:6px"></div>
+  <div class="grid" style="margin-top:18px"><div class="sk" style="height:240px"></div><div class="sk" style="height:240px"></div><div class="sk" style="height:240px"></div></div>
+  <noscript><p class="empty"><b>JavaScript आवश्यक छ</b>समाचार हेर्न कृपया JavaScript खुला गर्नुहोस्।</p></noscript>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><b>{{SITE_NAME}}</b> — {{SITE_TAGLINE}}</p>
+    <p>यो साइटले विभिन्न समाचार स्रोतका शीर्षक र छोटो सारांश मात्र देखाउँछ; पूरा समाचारका लागि मूल स्रोतमा जानुहोस्। सारांश स्वचालित रूपमा (AI द्वारा) तयार पारिएको हुँदा त्रुटि हुन सक्छ। समाचारको अधिकार सम्बन्धित स्रोतको हो।</p>
+    <p><a href="/feed.xml">RSS फिड</a> · <a href="#/saved">सुरक्षित समाचार</a></p>
+    <button class="btn-ghost" id="installBtn" hidden>📲 एपको रूपमा इन्स्टल गर्नुहोस्</button>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="/config.js"></script>
+<script src="/common.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
